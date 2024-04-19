@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'Docker-Node'
+        label 'Jumpserver'
     }
 
     environment {
