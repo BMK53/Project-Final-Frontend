@@ -8,18 +8,18 @@ metadata:
 spec:
   replicas: 1
     selector:
-    matchLabels:
-      role: frontend
-  template:
-    metadata:
-      labels:
+      matchLabels:
         role: frontend
-    spec:
-      nodeSelector:
-        node-role.kubernetes.io/worker: ""
-      containers:
-      - name: frontend
-        image: bmk53/three-tier-project:VERSION
+    template:
+      metadata:
+        labels:
+          role: frontend
+      spec:
+        nodeSelector:
+          node-role.kubernetes.io/worker: ""
+        containers:
+        - name: frontend
+          image: bmk53/three-tier-project:VERSION
         ports:
         - containerPort: 3000
 ---
