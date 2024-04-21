@@ -15,8 +15,6 @@ spec:
       labels:
         role: frontend
     spec:
-    #  nodeSelector:  # Add this section to specify node affinity
-    #    node-role.kubernetes.io/worker: ""  # Label of the worker node(s)
       containers:
       - name: frontend
         image: bmk53/three-tier-project:VERSION
@@ -31,7 +29,7 @@ metadata:
 spec:
   ports:
   - port: 3000
-    targetPort: 3000  # Adjusted to match container port
+    targetPort: 80
     protocol: TCP
     nodePort: 30005
   selector:
