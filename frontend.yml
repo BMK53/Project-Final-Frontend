@@ -15,8 +15,8 @@ spec:
       labels:
         role: frontend
     spec:
-      nodeSelector:  # Add this section to specify node affinity
-        node-role.kubernetes.io/worker: ""  # Label of the worker node(s)
+    //  nodeSelector:  # Add this section to specify node affinity
+    //    node-role.kubernetes.io/worker: ""  # Label of the worker node(s)
       containers:
       - name: frontend
         image: bmk53/three-tier-project:VERSION
